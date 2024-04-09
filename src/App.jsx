@@ -1,11 +1,18 @@
-
+import { Provider } from 'react-redux';
 import './App.css';
+// import Countries from './features/Countries';
+import { store } from './app/store';
+import Products from './features/Products';
 
 function App() {
   return (
-      <div className="App">
+     <Provider store={store}>
+       <div className="App">
           <h2>welcome to react</h2>
-      </div>
+          {/* <Countries></Countries> */}
+          <Products/>
+        </div>
+     </Provider>
   );
 }
 
